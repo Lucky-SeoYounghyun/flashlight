@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">test12</string>
+    <string name="battery_temperature">%1$.1f°C</string>
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="120dp"
+        android:layout_height="130dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:orientation="vertical"
+        android:id="@+id/floating_linear_layout"
+        android:background="@drawable/background">
+        <!-- 윗줄 레이아웃 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- 닫기 버튼 -->
+            <ImageButton
+                android:id="@+id/close_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_close"/>
+
+            <!-- 텍스트 뷰 -->
+            <TextView
+                android:id="@+id/text_view"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="Text"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+
+            <ImageButton
+                android:id="@+id/full_screen"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_fullscreen"/>
+        </LinearLayout>
+
+        <!-- 아랫줄 레이아웃 -->
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:background="@drawable/button_background">
+
+            <!-- 아랫줄 레이아웃의 ImageButton -->
+            <ImageButton
+                android:id="@+id/floating_button"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:background="@drawable/button_off"
+                />
+            <View
+                android:id="@+id/torch_level"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_on_level0"
+                />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

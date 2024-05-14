@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/floating_linear_layout">
+
+    <!-- 윗줄 레이아웃 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- 텍스트 뷰 -->
+        <TextView
+            android:id="@+id/text_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_margin="5dp"
+            android:background="@android:color/darker_gray"
+            android:text="Text"
+            android:gravity="center" />
+
+        <!-- 닫기 버튼 -->
+        <ImageButton
+            android:id="@+id/full_screen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_fullscreen"/>
+
+        <ImageButton
+            android:id="@+id/close_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_close"/>
+    </LinearLayout>
+
+    <!-- 아랫줄 레이아웃 -->
+    <FrameLayout
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <!-- 아랫줄 레이아웃의 ImageButton -->
+        <ImageButton
+            android:id="@+id/floating_button"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_power"
+            android:background="@android:color/black"
+            />
+
+        <!-- 점들을 추가 -->
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- 반복적으로 흰색 점 추가 -->
+            <View
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circle_shape"
+                android:id="@+id/torch_level_1" />
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circle_shape"
+                android:id="@+id/torch_level_2" />
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circle_shape"
+                android:id="@+id/torch_level_3" />
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circle_shape"
+                android:id="@+id/torch_level_4" />
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circle_shape"
+                android:id="@+id/torch_level_5" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>
