@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "943941732540",
+    "project_id": "flashlight-39af4",
+    "storage_bucket": "flashlight-39af4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943941732540:android:bd7fb89e3d40287c9028b9",
+        "android_client_info": {
+          "package_name": "com.strongflashlight.flashlight"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXtGo0G0AlE5r_I62H5HufWFQK-eaQ1Gw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      },
+      "admob_app_id": "ca-app-pub-1762492683681085~7031457290"
+    }
+  ],
+  "configuration_version": "1"
+}
