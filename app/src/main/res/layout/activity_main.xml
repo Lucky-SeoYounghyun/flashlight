@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
@@ -8,17 +10,20 @@
     <!-- 전원 버튼 위에 위치, 가운데 정렬 -->
     <RelativeLayout
         android:id="@+id/TopLayout"
-        android:layout_width="200dp"
-        android:layout_height="30dp"
+        android:layout_width="280dp"
+        android:layout_height="117dp"
         android:layout_above="@id/btnPower"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="120dp"
         android:background="#00000000">
 
         <LinearLayout
+            android:layout_marginTop="60dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="@drawable/test01"
+            android:padding="6dp">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -30,14 +35,17 @@
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/battery_temp_icon" />
+                    android:src="@drawable/battery_temp_icon"
+                    android:tint="#696969"
+                    tools:ignore="UseAppTint" />
 
                 <TextView
                     android:id="@+id/textBatteryTemp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=" -- °C"
-                    android:textSize="18sp"
+                    android:textColor="#696969"
+                    android:textSize="20sp"
                     android:textStyle="bold"
                     android:layout_marginStart="8dp"/>
             </LinearLayout>
@@ -50,29 +58,34 @@
                 android:gravity="center">
 
                 <ImageView
+                    android:id="@+id/batteryImageView"
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/charge_battery_icon"/>
+                    android:src="@drawable/charge_battery_icon"
+                    android:tint="#696969"
+                    tools:ignore="UseAppTint"/>
 
                 <TextView
                     android:id="@+id/ChargeBattery"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="--%"
-                    android:textSize="18sp"
+                    android:textColor="#696969"
+                    android:textSize="20sp"
                     android:textStyle="bold"
                     android:layout_marginStart="8dp"/>
             </LinearLayout>
         </LinearLayout>
+        <Button
+            android:id="@+id/btnsetting"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/setting_ver2"/>
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/btnFloating"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="16dp"
-        android:text="플로팅" />
 
     <View
         android:layout_width="180dp"
@@ -86,25 +99,96 @@
         android:layout_height="180dp"
         android:background="@drawable/main_button_off"
         android:layout_centerInParent="true"/> <!-- 화면 중앙에 위치 -->
-
-
     <SeekBar
         android:id="@+id/seekBar"
-        android:layout_width="300dp"
+        android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/btnPower"
         android:layout_marginTop="16dp"
-        android:max="4"
         android:visibility="gone"
+        android:max="4"
         android:layout_centerInParent="true"/>
 
-    <Button
-        android:id="@+id/btnScreen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="화면"
-        android:layout_alignParentBottom="true"
+    <RelativeLayout
+        android:id="@+id/BottomLayout"
+        android:layout_width="270dp"
+        android:layout_height="57dp"
+        android:layout_below="@id/btnPower"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"/> <!-- 전원 버튼 아래에 위치, 가운데 정렬 -->
+        android:layout_marginTop="90dp"
+        android:background="@drawable/test01">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_margin="2dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:id="@+id/leftbutton"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="left">
+
+                <Button
+                    android:id="@+id/btnFloating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pip_mode_off_ver2" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnSOS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sos"
+                    android:layout_below="@+id/btnPower"
+                    android:layout_margin="7dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:id="@+id/rightbutton"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="right">
+
+                <Button
+                    android:id="@+id/btnScreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/screen_mode_off_ver2"  />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+    <SeekBar
+        android:id="@+id/sosSeekBar"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnPower"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        android:max="4"
+        android:layout_centerInParent="true"/>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"/>
 
 </RelativeLayout>

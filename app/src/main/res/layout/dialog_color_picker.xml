@@ -2,9 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="300dp"
-    android:layout_height="wrap_content"
+    android:layout_height="420dp"
     android:orientation="vertical"
-    android:gravity="center_horizontal">
+    android:gravity="center_horizontal"
+    android:background="@drawable/setting_background"
+    >
 
     <com.skydoves.colorpickerview.ColorPickerView
         android:id="@+id/colorPickerView"
@@ -26,31 +28,41 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_margin="5dp">
 
         <Button
             android:id="@+id/colorWhite"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
             android:background="#FFFFFF" />
 
         <Button
             android:id="@+id/colorRed"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
             android:background="#FF0000" />
 
         <Button
             android:id="@+id/colorBlue"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
             android:background="#0000FF" />
 
         <Button
             android:id="@+id/colorBlack"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
             android:background="#000000" />
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -58,19 +70,21 @@
         android:orientation="horizontal"
         android:gravity="end"
         android:paddingTop="16dp">
-
         <Button
             android:id="@+id/button_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cancel" />
+            android:text="Cancel"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1" />
 
         <Button
             android:id="@+id/button_select"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Select"
-            android:layout_marginStart="8dp" />
+            android:layout_marginRight="30dp"
+            android:layout_weight="1" />
 
     </LinearLayout>
 </LinearLayout>

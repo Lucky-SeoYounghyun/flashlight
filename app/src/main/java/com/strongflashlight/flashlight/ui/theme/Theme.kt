@@ -1,4 +1,4 @@
-package com.example.flashlight.ui.theme
+package com.strongflashlight.flashlight.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

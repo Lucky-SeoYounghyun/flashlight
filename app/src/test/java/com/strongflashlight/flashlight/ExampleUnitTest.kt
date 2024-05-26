@@ -1,4 +1,4 @@
-package com.example.flashlight
+package com.strongflashlight.flashlight
 
 import org.junit.Test
 

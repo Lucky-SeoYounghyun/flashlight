@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">test12</string>
+    <string name="app_name">다기능 손전등</string>
     <string name="battery_temperature">%1$.1f°C</string>
 </resources>

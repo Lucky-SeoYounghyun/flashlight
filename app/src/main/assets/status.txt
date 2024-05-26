@@ -1,0 +1,5 @@
+currentlevel = [%d]
+isTorchOn = [false]
+soscurrentlevel = [%d]
+sosisTorchOn = [false]
+isflag = [false]

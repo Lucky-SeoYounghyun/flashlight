@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/setting_background">
+
+    <LinearLayout
+        android:id="@+id/TopLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <Button
+            android:id="@+id/backArrow"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/left_arrow_ver2"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/detailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#E6E6FA"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/TopLayout"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/contentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#E6E6FA"
+            android:textSize="15sp"
+            android:textIsSelectable="true"/>
+    </ScrollView>
+</RelativeLayout>

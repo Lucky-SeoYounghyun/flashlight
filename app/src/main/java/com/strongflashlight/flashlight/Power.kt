@@ -1,9 +1,10 @@
-package com.example.flashlight
+package com.strongflashlight.flashlight
 
 import android.content.Context
 import android.hardware.camera2.CameraAccessException
 import android.hardware.camera2.CameraCharacteristics
 import android.hardware.camera2.CameraManager
+import android.widget.Toast
 
 class Power(private val context: Context) {
     private val cameraManager: CameraManager by lazy {
@@ -23,60 +24,23 @@ class Power(private val context: Context) {
     }
 
     fun initializeCamera() {
-        try {
-            for (id in cameraManager.cameraIdList) {
-                val characteristics = cameraManager.getCameraCharacteristics(id)
-                val flashAvailable = characteristics.get(CameraCharacteristics.FLASH_INFO_AVAILABLE) ?: false
-                if (flashAvailable) {
-                    cameraId = id
-                    maxTorchStrength = characteristics.get(CameraCharacteristics.FLASH_INFO_STRENGTH_MAXIMUM_LEVEL) ?: maxTorchStrength
-                    registerTorchCallback(id)
-                    return
-                }
-            }
-        } catch (e: CameraAccessException) {
-            e.printStackTrace()
-        }
+        // 보안처리되었습니다
+
     }
 
     private fun registerTorchCallback(cameraId: String) {
-        cameraManager.registerTorchCallback(object : CameraManager.TorchCallback() {
-            override fun onTorchModeChanged(id: String, enabled: Boolean) {
-                if (cameraId == id) {
-                    isTorchOn = enabled
-                }
-            }
+        // 보안처리되었습니다
 
-            override fun onTorchModeUnavailable(id: String) {
-                if (cameraId == id) {
-                    isTorchOn = false
-                }
-            }
-        }, null)
     }
 
     fun setTorchStrengthLevel(strengthLevel: Int) {
-        cameraId?.let { id ->
-            try {
-                cameraManager.turnOnTorchWithStrengthLevel(id, strengthLevel)
-                currentTorchStrength = strengthLevel
-                isTorchOn = strengthLevel > 0
-            } catch (e: CameraAccessException) {
-                e.printStackTrace()
-            }
-        }
+        // 보안처리되었습니다
+
     }
 
     fun turnOffTorch() {
-        cameraId?.let { id ->
-            try {
-                cameraManager.setTorchMode(id, false)
-                isTorchOn = false
-                currentTorchStrength = 0
-            } catch (e: CameraAccessException) {
-                e.printStackTrace()
-            }
-        }
+        // 보안처리되었습니다
+
     }
 
     fun isTorchOn(): Boolean {

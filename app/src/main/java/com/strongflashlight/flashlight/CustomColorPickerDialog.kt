@@ -1,4 +1,4 @@
-package com.example.flashlight
+package com.strongflashlight.flashlight
 
 import android.app.Dialog
 import android.content.Context
@@ -27,51 +27,32 @@ class CustomColorPickerDialog(context: Context, private val callback: ColorPicke
     }
 
     private fun setupViews() {
-        colorPickerView = findViewById<ColorPickerView>(R.id.colorPickerView)
-        brightnessSlider = findViewById<BrightnessSlideBar>(R.id.brightnessSlider)
-
-        setupColorButton(R.id.colorWhite, 0xFFFFFFFF.toInt())
-        setupColorButton(R.id.colorRed, 0xFFFF0000.toInt())
-        setupColorButton(R.id.colorBlue, 0xFF0000FF.toInt())
-        setupColorButton(R.id.colorBlack, 0xFF000000.toInt())
-
-        colorPickerView.attachBrightnessSlider(brightnessSlider)
-        adjustColorPickerSize(colorPickerView)
+        // 보안처리되었습니다
 
     }
     private fun setupListeners() {
         val buttonSelect = findViewById<Button>(R.id.button_select)
         val buttonCancel = findViewById<Button>(R.id.button_cancel)
 
-        buttonSelect.setOnClickListener {
-            val color = colorPickerView.color
-            callback.onColorSelected(color)  // 'callback' 사용
-            dismiss()
-        }
+        // 보안처리되었습니다
 
-        buttonCancel.setOnClickListener {
-            dismiss()
-        }
     }
 
 
     private fun initializeColorPicker(initialColor: Int) {
-        val initialColor = loadInitialColor()
-        if (initialColor != -1) {
-            findViewById<ColorPickerView>(R.id.colorPickerView).setInitialColor(initialColor)
-        }
+        // 보안처리되었습니다
+
     }
 
     private fun loadInitialColor(): Int {
-        val sharedPref = context.getSharedPreferences("ColorPicker", Context.MODE_PRIVATE)
-        return sharedPref.getInt("lastColor", -1)
+        // 보안처리되었습니다
+
     }
 
     private fun setupColorButton(buttonId: Int, color: Int) {
         val button = findViewById<Button>(buttonId)
-        button.setOnClickListener {
-            findViewById<ColorPickerView>(R.id.colorPickerView).setInitialColor(color)
-        }
+        // 보안처리되었습니다
+
     }
     private fun adjustColorPickerSize(colorPickerView: ColorPickerView) {
         val displayMetrics = DisplayMetrics()
@@ -81,10 +62,7 @@ class CustomColorPickerDialog(context: Context, private val callback: ColorPicke
         val minDimension = minOf(width, height)
 
         val size = (minDimension * 2) / 3
-        colorPickerView.layoutParams.width = size
-        colorPickerView.layoutParams.height = size
-        colorPickerView.requestLayout()
-        colorPickerView.invalidate()
-        Log.d("ColorPickerSize", "Width: $size, Height: $size")
+        // 보안처리되었습니다
+
     }
 }

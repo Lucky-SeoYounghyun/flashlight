@@ -1,4 +1,4 @@
-package com.example.flashlight.ui.theme
+package com.strongflashlight.flashlight.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

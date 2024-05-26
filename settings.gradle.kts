@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "test12"
+rootProject.name = "flashlight"
 include(":app")
  

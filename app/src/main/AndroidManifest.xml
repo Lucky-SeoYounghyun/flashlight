@@ -11,24 +11,35 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_ver_main"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher_ver_main"
         android:supportsRtl="true"
         android:theme="@style/Theme.Test12"
         tools:targetApi="33">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-1762492683681085~7031457290"/> <!-- 테스트 광고 앱 ID -->
+
         <service android:name=".FloatingService"
-            android:permission="android.permission.SYSTEM_ALERT_WINDOW"/>
+            android:permission="android.permission.SYSTEM_ALERT_WINDOW"
+            android:foregroundServiceType="mediaProjection"
+            />
+
+        <activity android:name=".SettingActivity" />
+        <activity android:name=".DetailActivity"></activity>
 
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
             android:theme="@style/FullScreenTheme"
             android:supportsPictureInPicture="true"
             android:resizeableActivity="true"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation">
-        <intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -36,8 +47,12 @@
         </activity>
         <activity
             android:name=".FullWhiteActivity"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
         </activity>
+
     </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
 </manifest>

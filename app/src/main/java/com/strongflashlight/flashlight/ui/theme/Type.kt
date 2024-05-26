@@ -1,4 +1,4 @@
-package com.example.flashlight.ui.theme
+package com.strongflashlight.flashlight.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
