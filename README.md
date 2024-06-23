@@ -1,5 +1,8 @@
 This project involves the implementation of a flashlight app for mobile phones, but some parts of the code have been removed. We apologize for any inconvenience, as the full code cannot be disclosed due to various issues.
 
+The program is currently in testing before being uploaded to the Google Play Store. I will provide a link once the registration is complete.
+
+
 ![KakaoTalk_20240523_001915657](https://github.com/Lucky-SeoYounghyun/flashlight/assets/168096909/052c9a04-6a3a-405a-b410-082af4c5f43d)
 
 
